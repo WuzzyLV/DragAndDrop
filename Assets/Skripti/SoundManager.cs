@@ -1,15 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
-
-	[HideInInspector]
+	
 	public static SoundManager SM;
 	[HideInInspector]
 	public AudioSource audioSource;
 
 	public AudioClip failSoundEffect;
+	public AudioClip clickSoundEffect;
 	void Awake()
 	{
 		if(SM != null)
@@ -18,7 +16,7 @@ public class SoundManager : MonoBehaviour {
 			SM = this;
          
 		DontDestroyOnLoad(this);
-		
+
 		audioSource = GetComponent<AudioSource>();
 		
 		
@@ -28,6 +26,11 @@ public class SoundManager : MonoBehaviour {
 	public void PlayFailSoundEffect()
 	{
 		audioSource.PlayOneShot(failSoundEffect);
+	}
+	
+	public void PlayClickSoundEffect()
+	{
+		audioSource.PlayOneShot(clickSoundEffect);
 	}
 
 	public void PlaySoundEffect(AudioClip clip)
