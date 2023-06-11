@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Objekti : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public GameObject atkritumuMasina;
+	public GameObject atraPalidziba;
+	public GameObject autobuss;
 	
-	// Update is called once per frame
-	void Update () {
+	[HideInInspector] 
+	public Vector2 lastPos;
+
+	public Canvas kanva;
+	
+	[HideInInspector]
+	public bool vaiIstajaVieta = false;
+
+	public GameObject pedejaisVilktais = null;
+
+
+	void Start() {
 		
 	}
 }
