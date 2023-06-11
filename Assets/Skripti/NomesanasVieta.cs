@@ -58,6 +58,8 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler{
 					eventData.pointerDrag.GetComponent<RectTransform>().localScale =
 						GetComponent<RectTransform>().localScale;
 
+					//Paziņo Objekti.cs, ka mašīna ir nomesta pareizajā vietā
+					objektuSkripts.addCorrectCar();
 					//Atskaņo savu skaņas effektu cauri statiskajam SoundManager
 					SoundManager.SM.PlaySoundEffect(successSoundEffect);
 				}
