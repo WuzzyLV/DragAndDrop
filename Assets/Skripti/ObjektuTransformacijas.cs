@@ -12,13 +12,13 @@ public class ObjektuTransformacijas : MonoBehaviour {
 			if (Input.GetKey(KeyCode.Z))
 			{
 				objektuSkripts.pedejaisVilktais.
-				GetComponent<RectTransform>().Rotate(0, 0, Time.deltaTime * 9f);
+				GetComponent<RectTransform>().Rotate(0, 0, Time.deltaTime * 30f);
 			}
 
 			if (Input.GetKey(KeyCode.X))
 			{
 				objektuSkripts.pedejaisVilktais.
-				GetComponent<RectTransform>().Rotate(0, 0, -Time.deltaTime * 9f);
+				GetComponent<RectTransform>().Rotate(0, 0, -Time.deltaTime * 30f);
 			}
 
 			if (Input.GetKey(KeyCode.UpArrow))
